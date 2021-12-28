@@ -1,3 +1,29 @@
 <html>
-    <h1>Hello</h1>
+    <script src="https://lightningoutlwc.force.com/lightning/lightning.out.js"></script>
+
+   
+    <div id="lightning">/<div>
+    <script>
+        const appName = 'c:lightningoutApp';
+        const componentName = 'c:accountCreator';
+        const lightningEndpoint = 'https://lightningoutlwc.force.com';
+        const componentAttributes = {
+
+        };
+
+        $Lightning.use(
+            appName,
+            function(){
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttributes,
+                    "lightning",
+                    function(cmp){
+                        console.log('lightning component created');
+                    }
+                );
+            },
+            lightningEndpoint
+        );
+    </script>
 </html>
