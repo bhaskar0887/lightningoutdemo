@@ -2,7 +2,7 @@
     <script src="https://lightningoutlwc.force.com/lightning/lightning.out.js"></script>
 
     <div data-lightning-out="true"> </div>
-
+    <div id="lightning">/<div>
     <script>
         const appName = 'c:lightningoutApp';
         const componentName = 'c:accountCreator';
@@ -18,7 +18,7 @@
                 $Lightning.createComponent(
                     componentName,
                     componentAttributes,
-                    targetElement,
+                    "lightning",
                     function(cmp){
                         console.log('lightning component created');
                     }
